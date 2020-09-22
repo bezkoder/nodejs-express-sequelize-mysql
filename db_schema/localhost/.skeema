@@ -1,5 +1,9 @@
 default-character-set=utf8
 default-collation=utf8_general_ci
+flavor=mysql:5.7
+host=localhost
+socket=/tmp/mysql.sock
+user=root
 
 [development]
 schema=testdb
@@ -7,9 +11,5 @@ schema=testdb
 [staging]
 schema=staging_db
 
-[prodcution]
-flavor=mysql:5.7
-host=localhost
-socket=/tmp/mysql.sock
-user=root
+[prod]
 schema=prod_db

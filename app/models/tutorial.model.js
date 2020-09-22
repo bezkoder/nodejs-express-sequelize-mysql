@@ -9,6 +9,9 @@ module.exports = (sequelize, Sequelize) => {
     published: {
       type: Sequelize.BOOLEAN
     },
+    comments: {
+      type: Sequelize.STRING
+    }
   });
 
   return Tutorial;
