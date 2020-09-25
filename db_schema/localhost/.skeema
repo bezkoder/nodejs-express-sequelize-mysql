@@ -1,15 +1,17 @@
 default-character-set=utf8
 default-collation=utf8_general_ci
+flavor=mysql:5.7
+host=localhost
+socket=/tmp/mysql.sock
+user=root
 
 [development]
 schema=testdb
 
 [staging]
+alter-wrapper=/usr/local/bin/pt-online-schema-change --execute --alter {CLAUSES} D={SCHEMA},t={TABLE},h={HOST},P={PORT},u={USER},p={PASSWORDX}
 schema=staging_db
 
-[prodcution]
-flavor=mysql:5.7
-host=localhost
-socket=/tmp/mysql.sock
-user=root
+[prod]
+alter-wrapper=/usr/local/bin/pt-online-schema-change --execute --alter {CLAUSES} D={SCHEMA},t={TABLE},h={HOST},P={PORT},u={USER},p={PASSWORDX}
 schema=prod_db
