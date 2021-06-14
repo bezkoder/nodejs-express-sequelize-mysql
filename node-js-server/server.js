@@ -4,6 +4,9 @@ const cors = require("cors");
 
 const app = express();
 
+// const path = __dirname + '/app/views/';
+// app.use(express.static(path));
+
 var corsOptions = {
   origin: "http://localhost:8081"
 };
