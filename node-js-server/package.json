@@ -1,5 +1,5 @@
 {
-  "name": "nodejs-express-sequelize-mysql",
+  "name": "angular-12-nodejs-express-mysql-crud",
   "version": "1.0.0",
   "description": "Node.js Rest Apis with Express, Sequelize & MySQL",
   "main": "server.js",
