@@ -11,6 +11,18 @@ exports.create = (req, res) => {
     });
     return;
   }
+  else if(!req.body.description) {
+    res.status(400).send({
+      message: "Description should not be empty"
+    });
+    return;
+  }
+  else if(!req.body.published){
+    res.status(400).send({
+      message: "published should not be empty"
+    });
+    return;
+  }
 
   // Create a Tutorial
   const tutorial = {
